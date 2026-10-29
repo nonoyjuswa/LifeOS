@@ -1,0 +1,11 @@
+{
+  "name": "@lifeos/storage",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@lifeos/core": "*",
+    "dexie": "^4.0.0"
+  }
+}
