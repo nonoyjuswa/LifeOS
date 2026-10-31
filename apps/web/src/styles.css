@@ -60,3 +60,47 @@ button:disabled { opacity: 0.4; cursor: default; }
 .inbox .actions button { background: var(--line); padding: 6px 12px; font-size: 0.85rem; }
 .inbox .actions .danger:hover { background: var(--danger); }
 .empty { color: var(--muted); }
+
+.tabs { display: flex; gap: 4px; margin: 20px 0 8px; border-bottom: 1px solid var(--line); }
+.tab { background: transparent; color: var(--muted); border-radius: 6px 6px 0 0; padding: 10px 16px; }
+.tab.on { color: var(--text); background: var(--panel); border-bottom: 2px solid var(--accent); }
+
+h3 { font-size: 0.9rem; color: var(--muted); margin: 20px 0 8px; text-transform: uppercase; letter-spacing: 0.04em; }
+h4 { font-size: 0.85rem; margin: 14px 0 6px; }
+.block { margin-top: 8px; }
+.list { list-style: none; margin: 0; padding: 0; }
+
+.banner {
+  display: flex; justify-content: space-between; align-items: center;
+  background: var(--panel); border: 1px solid var(--accent); border-radius: 8px;
+  padding: 4px 12px; margin-bottom: 12px;
+}
+
+.row { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; margin-bottom: 8px; }
+.row label { display: flex; align-items: center; gap: 10px; padding: 14px 12px; cursor: pointer; }
+.row input[type="checkbox"] { width: 22px; height: 22px; accent-color: var(--accent); flex: none; }
+.row.done .label { text-decoration: line-through; color: var(--muted); }
+.time { color: var(--muted); font-variant-numeric: tabular-nums; margin-right: 6px; }
+
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 12px; margin-bottom: 8px; }
+.card .text { white-space: pre-wrap; word-break: break-word; }
+.card .meta { color: var(--muted); font-size: 0.75rem; margin-top: 4px; }
+.card .actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; align-items: center; }
+.card .actions button { background: var(--line); padding: 6px 12px; font-size: 0.85rem; }
+.card .actions button:disabled { opacity: 0.3; }
+.card .actions .danger:hover { background: var(--danger); }
+.card.fixed { border-style: dashed; }
+
+.tag { font-size: 0.7rem; color: var(--muted); border: 1px solid var(--line); border-radius: 10px; padding: 1px 8px; margin-left: 6px; }
+.tag.warn { color: #d29922; border-color: #d29922; }
+
+input[type="text"], input:not([type]), input[type="time"], input[type="date"], select {
+  font: inherit; color: var(--text); background: var(--bg);
+  border: 1px solid var(--line); border-radius: 6px; padding: 6px 10px;
+}
+.form { display: flex; flex-direction: column; gap: 10px; }
+.form-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 8px 0; }
+.days { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { background: var(--bg); border: 1px solid var(--line); border-radius: 16px; padding: 6px 12px; font-size: 0.85rem; }
+.chip.on { background: var(--accent); border-color: var(--accent); }
+.error { color: var(--danger); margin: 0; font-size: 0.85rem; }

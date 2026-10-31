@@ -110,3 +110,18 @@ export function dropItem(item: Item, now: Timestamp): Item {
 export function arrangeDay(ordered: Item[], now: Timestamp): Item[] {
   return ordered.map((item, index) => touch(item, now, { sortOrder: index }));
 }
+
+/** Set or clear the time of a planned item. */
+export function setItemTime(item: Item, time: ISOTime | undefined, now: Timestamp): Item {
+  return touch(item, now, { scheduledTime: time });
+}
+
+/** Moves one entry up (-1) or down (+1). Returns the same list if it can't move. */
+export function moveWithin<T>(list: T[], index: number, delta: -1 | 1): T[] {
+  const target = index + delta;
+  if (index < 0 || index >= list.length || target < 0 || target >= list.length) return list;
+  const copy = [...list];
+  const [moved] = copy.splice(index, 1);
+  copy.splice(target, 0, moved!);
+  return copy;
+}

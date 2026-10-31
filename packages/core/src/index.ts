@@ -4,3 +4,4 @@ export * from "./planning";
 export * from "./completion";
 export * from "./history";
 export * from "./capture";
+export * from "./recurrence";
